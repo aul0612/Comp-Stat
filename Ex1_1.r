@@ -1,5 +1,4 @@
-theta_0 <- 0.5
-m  <- 0
+
 eps  <- 10^(-10)
 N_H_obs <- 1
 n <- 5
@@ -20,5 +19,4 @@ NR <- function(theta_0 = 0.4){
     theta_ML  <- theta[m+1]
     return(data.frame(m = seq(0:(m-1)), theta_m = theta))
 }
-
 NR()
