@@ -1,0 +1,43 @@
+---
+title: "Notes"
+output: 
+  html_document:
+    code_folding: show
+    theme:
+      bg: "#202123"
+      fg: "#B8BCC2"
+      primary: "#EA80FC"
+      secondary: "#00DAC6"
+      base_font:
+        google: Prompt
+      heading_font:
+        google: Proza Libre
+---
+
+```{r setup, include=FALSE}
+if (requireNamespace("thematic")) 
+  thematic::thematic_rmd(font = "auto")
+```
+## 25.04.2024
+## 2.3 The true view on the EM-Algorithm
+# 2.3.1
+${P(Z_{ig} = 1) = \pi{_g}}$, but ${\pi_g}$ ist still unknown, as it is one parameter, we want to estimate.
+
+# 2.3.2
+Expectation comes in from the posterior probabilities which is equal to a conditional mean since Z_ig is binary.
+
+# 2.3.3
+If we maximize log-likelihood for each group individually, no singularities will appear.
+
+We don't know, $Z_{ig}$, so we predict it as a conditional expected value.
+This, then is just $p_{ig}$, since the posterior probability is just a conditional expected value.
+
+We first calculate an expected log-likelihood function, where posterior is predictor of latent variable.
+Then, we maximize over the parameters, and update our guesses (including the prior distribution) of the parameters.
+Then, loop.
+
+## 2.4 Cluster Analysis
+
+
+# 2.4.1 stopped
+
