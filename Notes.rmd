@@ -47,10 +47,15 @@ Then, loop.
 
 ### 06.05.2024
 ## 3.2 Recap
-ECDF ($F_"n"$) is a random function.
+ECDF ($F_n$) is a random function.
 right-continuous
-ECDF is distribution function of $X^"*"$ where $X^"*"$ is discrete with the values we observed.
-Random sample comes from random variable X, our ECDF uses $X^"*"$ which comes from our random sample.
+ECDF is distribution function of $X^*$ where $X^*$ is discrete with the values we observed.
+Random sample comes from random variable X, our ECDF uses $X^*$ which comes from our random sample.
 Idea: X ~ F. we cannot sample from F, but we can resample from a distribution with ECDF.
+Glivenko-Cantelli-Theorem implies pointwise convergence.
 
-
+Bootstrap sampling is sampling from the original sample with replacement.
+Resampling m times a Bootstrap sample of size n.
+with large m theta hat asterisk n is approximating sample well. If initial sample size n is large enough, it is by asymptotic arguments also informative of the population.
+Bootstrap is nonparametric because F is not parameterized (there is a parametrical Bootstrap, which is not used often since it requires distributional assumptions on F).
+$S_n$ can be either a random sample or the realization of it.
