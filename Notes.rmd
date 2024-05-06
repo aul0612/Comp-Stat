@@ -18,7 +18,7 @@ output:
 if (requireNamespace("thematic")) 
   thematic::thematic_rmd(font = "auto")
 ```
-## 25.04.2024
+### 25.04.2024
 ## 2.3 The true view on the EM-Algorithm
 # 2.3.1
 ${P(Z_{ig} = 1) = \pi{_g}}$, but ${\pi_g}$ ist still unknown, as it is one parameter, we want to estimate.
@@ -38,6 +38,19 @@ Then, loop.
 
 ## 2.4 Cluster Analysis
 
+### 29.04.2024
+## Exercises Chapter 1
 
-# 2.4.1 stopped
+### 02.05.2024
+
+# 2.4.1 
+
+### 06.05.2024
+## 3.2 Recap
+ECDF ($F_"n"$) is a random function.
+right-continuous
+ECDF is distribution function of $X^"*"$ where $X^"*"$ is discrete with the values we observed.
+Random sample comes from random variable X, our ECDF uses $X^"*"$ which comes from our random sample.
+Idea: X ~ F. we cannot sample from F, but we can resample from a distribution with ECDF.
+
 
