@@ -59,3 +59,16 @@ Resampling m times a Bootstrap sample of size n.
 with large m theta hat asterisk n is approximating sample well. If initial sample size n is large enough, it is by asymptotic arguments also informative of the population.
 Bootstrap is nonparametric because F is not parameterized (there is a parametrical Bootstrap, which is not used often since it requires distributional assumptions on F).
 $S_n$ can be either a random sample or the realization of it.
+
+
+### 13.05.2024
+The ECDF is binomial regardless of the actual distribution of X. -> "distribution-free"
+That is because rank-statistics are distribution-free
+
+## Exercises Chapter 2
+
+you could use that to conduct cluster Analysis on mnist
+
+## 3.4 The Basic Bootstrap Method
+
+We do as if we know H_n Boot, although it is a population version. Since we can choose m arbitrarily large sample version H_n,m Boot ist arbitrarily good approximation.
