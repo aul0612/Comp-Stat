@@ -18,15 +18,15 @@ output:
 if (requireNamespace("thematic")) 
   thematic::thematic_rmd(font = "auto")
 ```
-### 25.04.2024
+# 25.04.2024
 ## 2.3 The true view on the EM-Algorithm
-# 2.3.1
+### 2.3.1
 ${P(Z_{ig} = 1) = \pi{_g}}$, but ${\pi_g}$ ist still unknown, as it is one parameter, we want to estimate.
 
-# 2.3.2
+### 2.3.2
 Expectation comes in from the posterior probabilities which is equal to a conditional mean since Z_ig is binary.
 
-# 2.3.3
+### 2.3.3
 If we maximize log-likelihood for each group individually, no singularities will appear.
 
 We don't know, $Z_{ig}$, so we predict it as a conditional expected value.
@@ -36,16 +36,8 @@ We first calculate an expected log-likelihood function, where posterior is predi
 Then, we maximize over the parameters, and update our guesses (including the prior distribution) of the parameters.
 Then, loop.
 
-## 2.4 Cluster Analysis
 
-### 29.04.2024
-## Exercises Chapter 1
-
-### 02.05.2024
-
-# 2.4.1 
-
-### 06.05.2024
+# 06.05.2024
 ## 3.2 Recap
 ECDF ($F_n$) is a random function.
 right-continuous
@@ -61,7 +53,7 @@ Bootstrap is nonparametric because F is not parameterized (there is a parametric
 $S_n$ can be either a random sample or the realization of it.
 
 
-### 13.05.2024
+# 13.05.2024
 The ECDF is binomial regardless of the actual distribution of X. -> "distribution-free"
 That is because rank-statistics are distribution-free
 
@@ -71,4 +63,4 @@ you could use that to conduct cluster Analysis on mnist
 
 ## 3.4 The Basic Bootstrap Method
 
-We do as if we know H_n Boot, although it is a population version. Since we can choose m arbitrarily large sample version H_n,m Boot ist arbitrarily good approximation.
+We do as if we know $H_n^{Boot}$, although it is a population version. Since we can choose m arbitrarily large sample version $H_{n,m}^{Boot}$ is arbitrarily good approximation.
