@@ -24,7 +24,7 @@ if (requireNamespace("thematic"))
 ${P(Z_{ig} = 1) = \pi{_g}}$, but ${\pi_g}$ ist still unknown, as it is one parameter, we want to estimate.
 
 ### 2.3.2
-Expectation comes in from the posterior probabilities which is equal to a conditional mean since Z_ig is binary.
+Expectation comes in from the posterior probabilities which is equal to a conditional mean since $Z_ig$ is binary.
 
 ### 2.3.3
 If we maximize log-likelihood for each group individually, no singularities will appear.
@@ -64,3 +64,5 @@ you could use that to conduct cluster Analysis on mnist
 ## 3.4 The Basic Bootstrap Method
 
 We do as if we know $H_n^{Boot}$, although it is a population version. Since we can choose m arbitrarily large sample version $H_{n,m}^{Boot}$ is arbitrarily good approximation.
+
+# 16.05.2024
