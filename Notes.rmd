@@ -67,4 +67,5 @@ We do as if we know $H_n^{Boot}$, although it is a population version. Since we 
 
 # 27.05.2024
 we can take the sum out of the variance since we have iid data and thus, the covariances are zero.
-
+big O -> LHS has same order of magnitude
+small o -> LHS has smaller order of magnitude
