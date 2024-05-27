@@ -65,4 +65,6 @@ you could use that to conduct cluster Analysis on mnist
 
 We do as if we know $H_n^{Boot}$, although it is a population version. Since we can choose m arbitrarily large sample version $H_{n,m}^{Boot}$ is arbitrarily good approximation.
 
-# 16.05.2024
+# 27.05.2024
+we can take the sum out of the variance since we have iid data and thus, the covariances are zero.
+
