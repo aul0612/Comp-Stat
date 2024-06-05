@@ -69,3 +69,7 @@ We do as if we know $H_n^{Boot}$, although it is a population version. Since we 
 we can take the sum out of the variance since we have iid data and thus, the covariances are zero.
 big O -> LHS has same order of magnitude
 small o -> LHS has smaller order of magnitude
+
+
+# 03.06.2024
+now, lambda_n is bound from above by a conditional mean, i.e. it is stochastic.
