@@ -73,3 +73,13 @@ small o -> LHS has smaller order of magnitude
 
 # 03.06.2024
 now, lambda_n is bound from above by a conditional mean, i.e. it is stochastic.
+
+# 10.06.2024
+If we have a proper 1-$/alpha$ CI, the non-coverage probability is alpha. We want that the non-coverage probability minus alpha goes to zero.
+First and second order accuracy describe how fast this convergence is.
+
+With Bootstrap confidence intervals for beta, there might occur multiple testing problems. (-> Bonferoni)
+
+Here, we assume we are only interested in the j-th component of beta.
+
+CI based on Bootstrap pairs is automatically Heteroscedasticity-robust.
