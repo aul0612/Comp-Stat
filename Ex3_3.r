@@ -103,8 +103,10 @@ coverage_prob
 ## Parallelized version:
 
 library(parallel)
-start_time <- Sys.time()
-n <- 20
+library(tictoc)
+# start_time <- Sys.time()
+tic()
+n <- 100
 df <- 1
 M <- 100000
 CI <- matrix(numeric(3*n), nrow = n, ncol = 3)
@@ -134,8 +136,8 @@ for(i in 1:n){
     CI[i, 3] <- (CI[i, 1] <= df) & (CI[i, 2] >= df)
     print(i)
 }
-end_time <- Sys.time()
-print(end_time-start_time)
-
+# end_time <- Sys.time()
+# print(end_time-start_time)
+toc()
 coverage_prob <- sum(CI[, 3]) / n
 coverage_prob

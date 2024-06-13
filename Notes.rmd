@@ -82,4 +82,10 @@ With Bootstrap confidence intervals for beta, there might occur multiple testing
 
 Here, we assume we are only interested in the j-th component of beta.
 
-CI based on Bootstrap pairs is automatically Heteroscedasticity-robust.
+CI based on Bootstrap pairs is automatically Heteroscedasticity-robust. 
+
+# 13.06.2024
+First method of Wild Bootstrap uses that observed residuals are informative about the individual subjects error variance.
+
+Bootstrap t CI: SE used here only works for homoskedastic error term, since it is based on the asymptotic distribution of beta given homoskedastic errors.
+
