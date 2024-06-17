@@ -4,41 +4,43 @@
 ### a
 ## Part 1
 n <- 20
+B <- 100000
 mu <- 1
 sd <- 2
 alpha <- 0.05
 quantile <- qnorm(1-alpha/2)
-CI <- matrix(numeric(3*n), nrow = n, ncol = 3)
-for(i in 1:n){
+CI <- matrix(numeric(3*B), nrow = B, ncol = 3)
+for(i in 1:B){
     sample <- rnorm(n, mu, sd)
     mu_est <- mean(sample)
     sd_est <- sd(sample)
     CI[i,1:2] <- c(mu_est - quantile * sd_est/sqrt(n), mu_est + quantile * sd_est/sqrt(n))
     CI[i, 3] <- CI[i,1]<= mu & CI[i,2]>=mu
 }
-coverage_prob <- sum(CI[,3])/n
+coverage_prob <- sum(CI[,3])/B
 coverage_prob
 
 
 #Part 2
-CI <- matrix(numeric(3*n), nrow = n, ncol = 3)
-for(i in 1:n){
+CI <- matrix(numeric(3*B), nrow = B, ncol = 3)
+for(i in 1:B){
     sample <- rchisq(n, 1)
     mu_est <- mean(sample)
     sd_est <- sd(sample)
     CI[i,1:2] <- c(mu_est - quantile * sd_est/sqrt(n), mu_est + quantile * sd_est/sqrt(n))
     CI[i, 3] <- CI[i,1]<= mu & CI[i,2]>=mu
 }
-coverage_prob <- sum(CI[,3])/n
+coverage_prob <- sum(CI[,3])/B
 coverage_prob
 
 ### b
 # Part 2 with Standard Bootstrap
 n <- 20
+B  <- 1000
 df <- 1
 mu <- df
 M <- 100000
-CI <- matrix(numeric(3*n), nrow = n, ncol = 3)
+CI <- matrix(numeric(3*B), nrow = B, ncol = 3)
 alpha <- 0.05
 bootstrap_func <- function(sample, m = M){
     bootstrap_est <- numeric(m)
@@ -49,7 +51,7 @@ bootstrap_func <- function(sample, m = M){
     return(bootstrap_est)
 }
 
-for(i in 1:n){
+for(i in 1:B){
     sample <- rchisq(n, df)
     mu_est <- mean(sample)
     bootstrap_est <- bootstrap_func(sample)
@@ -58,7 +60,7 @@ for(i in 1:n){
     CI[i, 3] <- CI[i,1]<= mu & CI[i,2]>=mu
 }
 
-coverage_prob <- sum(CI[,3])/n
+coverage_prob <- sum(CI[,3])/B
 coverage_prob
 
 
@@ -69,8 +71,9 @@ start_time <- Sys.time()
 n <- 20
 df <- 1
 mu <- df
+B <- 10000
 M <- 100000
-CI <- matrix(numeric(3*n), nrow = n, ncol = 3)
+CI <- matrix(numeric(3*B), nrow = B, ncol = 3)
 alpha <- 0.05
 bootstrap_t_func <- function(sample, sample_est, m = M){
     bootstrap_t_est <- numeric(m)
@@ -83,7 +86,7 @@ bootstrap_t_func <- function(sample, sample_est, m = M){
     return(bootstrap_t_est)
 }
 
-for(i in 1:n){
+for(i in 1:B){
     sample <- rchisq(n, df)
     mu_est <- mean(sample)
     sd_est <- sd(sample)
@@ -94,7 +97,7 @@ for(i in 1:n){
 }
 end_time <- Sys.time()
 print(end_time-start_time)
-coverage_prob <- sum(CI[,3])/n
+coverage_prob <- sum(CI[,3])/B
 coverage_prob
 # with M = 10,000 and M = 100,000 it is still relatively inaccurate,
 # error or are larger M needed?
@@ -106,10 +109,11 @@ library(parallel)
 library(tictoc)
 # start_time <- Sys.time()
 tic()
-n <- 100
+n <- 20
 df <- 1
-M <- 100000
-CI <- matrix(numeric(3*n), nrow = n, ncol = 3)
+M <- 1000
+B <- 1000
+CI <- matrix(numeric(3*B), nrow = B, ncol = 3)
 alpha <- 0.05
 num_cores <- detectCores() - 1  # Use one less core than available to avoid freezing the system
 
@@ -126,7 +130,7 @@ bootstrap_t_func <- function(sample, sample_est, n, m = M){
     return(bootstrap_t_est)
 }
 
-for(i in 1:n){
+for(i in 1:B){
     sample <- rchisq(n, df)
     mu_est <- mean(sample)
     sd_est <- sd(sample)
@@ -139,5 +143,5 @@ for(i in 1:n){
 # end_time <- Sys.time()
 # print(end_time-start_time)
 toc()
-coverage_prob <- sum(CI[, 3]) / n
+coverage_prob <- sum(CI[, 3]) / B
 coverage_prob
