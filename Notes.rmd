@@ -89,9 +89,20 @@ First method of Wild Bootstrap uses that observed residuals are informative abou
 
 Bootstrap t CI: SE used here only works for homoskedastic error term, since it is based on the asymptotic distribution of beta given homoskedastic errors.
 
+## Chapter 4: Nonparametric Regression
 
 # 17.06.2024
 Nonparametric Regression assumes, whenever we assume a particular model structure, we are making systematic errors, since it will never be the true model.
 -> model misspecification error
 
 with more and more datapoints (large n), we have approxiamtely equidistant design.
+
+
+# 20.06.2024
+Difference to parametric regression setting is that we acknowledge systematic errors.
+In parametric regression we would say m(x) is = (not approx.) to our regression model, since we assumes our parametrization is true.
+This implies that we even on average make errors. We can see systematic errors in plots of polynomial regressions.
+
+Beta hat is here not really interpretable.
+
+Concrete construction of splines not in the exam.
