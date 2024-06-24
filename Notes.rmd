@@ -106,3 +106,10 @@ This implies that we even on average make errors. We can see systematic errors i
 Beta hat is here not really interpretable.
 
 Concrete construction of splines not in the exam.
+
+# 24.06.2024
+With splines, we fix the degree of the polynomial and the number of knots serves as something like a smoothing parameter.
+
+The space of spline function includes all linear combinations of the basis functions.
+
+B-splines: We have for each knot-interval k basis functions that we can use and combine linearly to fit out regression.
