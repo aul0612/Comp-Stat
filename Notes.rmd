@@ -113,3 +113,12 @@ With splines, we fix the degree of the polynomial and the number of knots serves
 The space of spline function includes all linear combinations of the basis functions.
 
 B-splines: We have for each knot-interval k basis functions that we can use and combine linearly to fit out regression.
+
+
+# 27.06.204
+with regression splines the beta hat vector is the linear parameter vector that applied to our basis functions yields the leas squared difference from the true model.
+that is, the spline function in the spline space that gets closest to the true outcomes.
+
+m hat depends on the number of knots we use. Different number of knots -> different X matrices -> different m hat
+
+!definitely a big O / small o question in the exam!
