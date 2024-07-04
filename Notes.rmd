@@ -122,3 +122,16 @@ that is, the spline function in the spline space that gets closest to the true o
 m hat depends on the number of knots we use. Different number of knots -> different X matrices -> different m hat
 
 !definitely a big O / small o question in the exam!
+
+# 01.07.2024
+With degree k, in the first interval we need to estimate k+1 parameters. In every following interval, only one new parameter is added (parameters of all other basis functions were already fixed in intervals before)
+
+# 04.07.2024
+In fixed designs: Bias squared is bound from above by a constant times p^(-4) -> p is smaller than n (to be able to solve OLS problem), but with large n, Bias goes to zero.
+Random design, this means squared bias is bound from above in probability by a constant * p^(-4) -> requires that random variable only rarely exceeds the constant.
+
+trace = sum over main diagonal
+
+MSE in parametric regression converges with rate 1/n as Variance converges with rate 1/n and Bias is 0.
+
+Price to pay in nonparametric regression: slower convergence. -> data-hungriness of nonparametric regression: we need more data for the same accuracy.
