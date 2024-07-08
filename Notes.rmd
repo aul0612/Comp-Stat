@@ -135,3 +135,12 @@ trace = sum over main diagonal
 MSE in parametric regression converges with rate 1/n as Variance converges with rate 1/n and Bias is 0.
 
 Price to pay in nonparametric regression: slower convergence. -> data-hungriness of nonparametric regression: we need more data for the same accuracy.
+
+
+# 08.07.2024
+Leaving out i-th observation in estimating m, prevents prediction error to behave like R^2 (always larger if more parameters included)
+
+GCV is not really cross-validation, rather an information criterion with a penalty term $1/(1-p/n)^2$
+Getting the penalty term is not always obvious for different methods.
+
+Overfitting -> outside validity problems
