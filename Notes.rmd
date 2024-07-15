@@ -144,3 +144,12 @@ GCV is not really cross-validation, rather an information criterion with a penal
 Getting the penalty term is not always obvious for different methods.
 
 Overfitting -> outside validity problems
+
+# 15.07.2024
+In nonparametric regression we could make ARSS(p) arbitrarily small by increasing p. Thats why this is not a good estimator of sigma^2.
+
+ARSS measures prediction error, MASE measures estimation error, hence, the optimism term.
+
+Magnitude of optimism depends on the noise sigma^2. If that is low, Overfitting isn't as bad.
+
+
