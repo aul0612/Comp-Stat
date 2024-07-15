@@ -153,3 +153,5 @@ ARSS measures prediction error, MASE measures estimation error, hence, the optim
 Magnitude of optimism depends on the noise sigma^2. If that is low, Overfitting isn't as bad.
 
 
+The optimism part also exists in classic regression. It gives a relationship between the parameters to be estimated (in classic regression analysis p=k) and the sample size n.
+p/n has to be such that the optimism term is roughly zero.
